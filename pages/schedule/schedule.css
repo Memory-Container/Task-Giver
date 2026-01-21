@@ -1,0 +1,316 @@
+:root {
+    --column-height: 60px;
+    --border-opacity: 0.07;
+    --border-color: 0, 0, 0, var(--border-opacity);
+    --border: rgba(var(--border-color));
+    --checkbox-color: rgb(0, 68, 156);
+    --checkbox-width: 14px;
+}
+main {
+    height: 100%;
+}
+.section1 {
+    position: relative;
+    height: 100%;
+    z-index: -1;
+}
+.section1 .container {
+    width: 100%;
+    max-width: unset;
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    position: relative;
+    z-index: -1;
+}
+.side-nav {
+    width: 15%;
+    min-width: 200px;
+    max-width: 400px;
+    background-color: rgb(233, 233, 233);
+    box-shadow: 5px 0px 5px var(--shadow-default);
+    display: flex;
+    align-items: flex-start;
+    overflow: none;
+}
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    top: 60px;
+    position: sticky;
+    padding: 10px 7px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.new-event {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 100%;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all .2s ease;
+    font-weight: 500;
+    box-shadow: 0px 3px 4px #7272723b, -2px -3px 4px #ffffff1e, inset 0px 0px 0px #44444489, inset 0px 0px 0px #ffffff21;;
+    color: rgb(66, 66, 66);
+    background-color: white;
+    font-size: 16px;
+    border: 1px solid #00000052;
+}
+.create-options {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+}
+.create-choice {
+    font-size: 15px;
+    opacity: 0.5;
+    padding: 8px 16px;
+    border-bottom: 2px solid black;
+    transition: 0.25s;
+    font-weight: 600;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+}
+.create-choice:hover {
+    background-color: rgba(128, 128, 128, 0.245);
+}
+.create-choice.active {
+    opacity: 1;
+    border-width: 2px;
+    border-color: var(--accent);
+    color: var(--accent);
+}
+i {
+    font-size: 0.9rem;
+    margin-right: 0.4rem;
+    height: 100%;
+}
+.new-event:hover {
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    background-color: color-mix(in srgb, white 100%, black 7%);
+}
+.filter-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.filter-type:hover {
+    background-color: rgb(205, 205, 205);
+}
+.filter-type {
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+.filter-options {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.content-label {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 15px;
+    transition: 0.3s;
+    gap: 5px;
+    font-size: 15px;
+    line-height: 16px;
+    justify-content: space-between;
+}
+.content-label .mode {
+    width: 80%;
+}
+.content-label input, .content-label textarea {
+    height: 25px;
+    outline: none;
+    border: 0;
+    width: 80%;
+    padding: 10px;
+}
+.content-label textarea {
+    resize: none;
+    height: 100px;
+    width: 80%;
+}
+.content-label input[type="datetime-local"] {
+    padding: 5px;
+    font-size: 12px;
+    width: min-content;
+}
+input:focus {
+    outline: none;
+}
+label.title {
+    gap: 5px;
+    color: #000000a8;
+}
+label.tag {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 15px;
+    transition: 0.3s;
+    gap: 10px;
+    font-size: 15px;
+    line-height: 16px;
+}
+label.tag:hover {
+    background-color: rgb(210, 210, 210);
+}
+input[type="checkbox"] {
+    display: inline;
+    appearance: none;
+    width: var(--checkbox-width);
+    height: var(--checkbox-width);
+    border: 2px solid var(--checkbox-color);
+    border-radius: 3px;
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+}
+input[type="checkbox"]::before {
+    content: "";
+    width: var(--checkbox-width);
+    height: var(--checkbox-width);
+    border-radius: 3px;
+    background-color: var(--checkbox-color);
+    background-image: url("../../assets/svg/check.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: 0.2s;
+}
+input[type="checkbox"]:hover::before {
+    background-color: var(--checkbox-color);
+}
+input[type="checkbox"]:checked::before {
+    opacity: 1;
+}
+.btn-new {
+    padding: 2px 4px;
+    border: 0;
+    background-color: transparent;
+    font-size: 15px;
+}
+table.calendar {
+    table-layout: fixed;
+    width: 100%;
+    text-align: center;
+    border-spacing: 0;
+}
+.calendar-row {
+    height: 28px;
+    position: relative;
+    z-index: 0;
+}
+.days {
+    font-size: 10px;
+    font-weight: 500;
+    vertical-align: middle;
+    color: rgb(31, 31, 31);
+}
+.circle {
+    display: grid;
+    font-size: 10px;
+    place-content: center;
+    width: 24px;
+    height: 24px;
+    background-color: rgba(0, 35, 104, 0);
+    border-radius: 50%;
+    border: 0;
+    transition: 0.3s;
+    letter-spacing: 1px;
+}
+.circle:hover {
+    background-color: color-mix(in srgb,var(--accent) 100%, rgb(255, 255, 255) 100%);
+}
+table.schedule {
+    width: 100%;
+    height: calc(100vh - 60px);
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    border-bottom: 0px;
+}
+table.schedule tr {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+table.schedule th:first-child,table.schedule td:first-child {
+    flex: 0.3;
+    min-width: 50px;
+    border-left: 0;
+    padding: 0;
+}
+table.schedule th, table.schedule td {
+    min-width: 120px;
+    padding: 10px 0;
+    border: 2px solid var(--border);
+    border-right: 0;
+    border-top: 0;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+table.schedule td {
+    padding: 0;
+    border-bottom: 1px solid var(--border);
+}
+table.schedule th:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.081);
+}
+table.schedule th span {
+    font-size: 14px;
+    font-weight: bold;
+}
+.time-data {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--column-height);
+    align-items: flex-end;
+    padding: 0px 5px;   
+    position: relative;
+    top: -1px;
+}
+.time-mark {
+    font-size: 13px;
+    opacity: 0.7;
+    line-height: 0;
+}
+.cell-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+}
+.cell {
+    height: var(--column-height);
+    border-bottom: 2px solid var(--border);
+}
+.cell-container .cell:last-child {
+    border-bottom: 0px solid var(--border);
+}

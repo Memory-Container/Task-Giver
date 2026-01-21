@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Giver | Schedule</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="./schedule.css">
+    <link rel="stylesheet" href="../../shared/css/utils.css">
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <!-- <div class="backdrop">
+            <div class="modal-container">
+                <label class="title flex-c a-start">
+                    <span>Tiêu đề</span>
+                    <input class="title" placeholder="Thêm tiêu đề">
+                </label>
+                <div>
+                    <div class="create-options">
+                        <div class="create-choice">Công việc</div>
+                        <div class="create-choice">Sự Kiện</div>
+                    </div>
+                    <div class="task-content">
+                        <label class="content-label">
+                            <span>Ngày tạo </span>
+                            <div class="mode">
+                                <input type="datetime-local">   
+                            </div>
+                        </label>
+                        <label class="content-label">
+                            <span>Hạn chót </span>
+                            <div class="mode">
+                                <input type="datetime-local">   
+                            </div>
+                        </label>
+                        <label class="content-label">
+                            <span>Thẻ </span>
+                            <input type="text" placeholder="Thêm thẻ">
+                        </label>
+                        <label class="content-label a-start">
+                            <span>Mô tả </span>
+                            <textarea type="text" placeholder="Thêm mô tả"></textarea>
+
+                        </label>
+                        <label class="content-label">
+                            <span>Chế độ </span>
+                            <div class="mode">
+                                <button class="mode-btn">Cá Nhân</button>
+                                <button class="mode-btn">Khác</button>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <section class="section1">
+            <div class="container">
+                <aside class="side-nav">
+                    <div class="nav-container">
+                        <button class="new-event" onclick="console.log(1)">
+                            <i class="fas fa-plus"></i>
+                            Tạo
+                        </button>
+                        <table class="calendar">
+                            <thead>
+                                <tr class="calendar-row">
+                                    <td class="days">Mon</td>
+                                    <td class="days">Tue</td>
+                                    <td class="days">Wed</td>
+                                    <td class="days">Thu</td>
+                                    <td class="days">Fri</td>
+                                    <td class="days">Sat</td>
+                                    <td class="days">Sun</td>
+                                </tr>
+                            </thead>
+                            <tbody class="calendar-date">
+                                <tr class="calendar-row">
+                                    <td class="days">
+                                        <span class="active">
+                                            1
+                                        </span>
+                                    </td>
+                                    <td class="days">
+                                        <span>
+                                            2
+                                        </span>
+                                    </td>
+                                    <td class="days">
+                                        <span>
+                                            3
+                                        </span>
+                                    </td>
+                                    <td class="days">
+                                        <span>
+                                            4
+                                        </span>
+                                    </td>
+                                    <td class="days">
+                                        <span>
+                                            5
+                                        </span>
+                                    </td>
+                                    <td class="days">
+                                        <span>
+                                            6
+                                        </span>
+                                    </td>
+                                    <td class="days">
+                                        <span>
+                                            7
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="filter-section">
+                            <div class="filter-container">
+                                <div class="filter-type">Người gửi <i class="fa-solid fa-chevron-down"></i></div>
+                                <div class="filter-options dropdown">
+                                    <label class="tag">
+                                        <input type="checkbox" aria-label="123"> 
+                                        <div>
+                                            <span>
+                                                Cá Nhân
+                                            </span>
+                                        </div>
+                                    </label>
+                                    <label class="tag">
+                                        <input type="checkbox" aria-label="123"> 
+                                        <div>
+                                            <span>
+                                                USide Studio
+                                            </span>
+                                        </div>
+                                    </label>
+                                    <label class="tag">
+                                        <input type="checkbox" aria-label="123"> 
+                                        <div>
+                                            <span>
+                                                Farland HQ
+                                            </span>
+                                        </div>
+                                    </label>
+                                    <label class="tag">
+                                        <input type="checkbox" aria-label="123"> 
+                                        <div>
+                                            <span>
+                                                Project 1
+                                            </span>
+                                        </div>
+                                    </label>
+                                    <label class="tag">
+                                        <input type="checkbox" aria-label="123"> 
+                                        <div>
+                                            <span>
+                                                USide Studio
+                                            </span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter-container">
+                                <div class="filter-type">Thẻ <i class="fa-solid fa-chevron-down"></i></div>
+                                <div class="filter-options dropdown">
+                                    <label class="tag">
+                                        <input type="checkbox" aria-label="123"> 
+                                        <div>
+                                            <span>
+                                                Hạn deadline
+                                            </span>
+                                        </div>
+                                    </label>
+                                    <label class="tag">
+                                        <input type="checkbox" aria-label="123"> 
+                                        <div>
+                                            <span>
+                                                Sự kiện
+                                            </span>
+                                        </div>
+                                    </label>
+                                    <label class="tag">
+                                        <input type="checkbox" aria-label="123"> 
+                                        <div>
+                                            <span>
+                                                Talkshow
+                                            </span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <table class="schedule">
+                    <thead>
+                        <tr>
+                            <th>
+                                <span></span>
+                            </th>
+                            <th>
+                                <span>Thứ 2</span>
+                            </th>
+                            <th>
+                                <span>Thứ 3</span>
+                            </th>
+                            <th>
+                                <span>Thứ 4</span>
+                            </th>
+                            <th>
+                                <span>Thứ 5</span>
+                            </th>
+                            <th>
+                                <span>Thứ 6</span>
+                            </th>
+                            <th>
+                                <span>Thứ 7</span>
+                            </th>
+                            <th>
+                                <span>Chủ Nhật</span>
+                            </th>
+                        </tr>
+                    </thead>  
+                    <tbody>
+                        <tr>
+                            <td class="time-column">
+                                <div class="time-data">
+                                    <div class="time-mark">
+                                    </div>
+                                    <div class="time-mark">
+                                        01:00
+                                    </div>
+                                    <div class="time-mark">
+                                        02:00
+                                    </div>
+                                    <div class="time-mark">
+                                        03:00
+                                    </div>
+                                    <div class="time-mark">
+                                        04:00
+                                    </div>
+                                    <div class="time-mark">
+                                        05:00
+                                    </div>
+                                    <div class="time-mark">
+                                        06:00
+                                    </div>
+                                    <div class="time-mark">
+                                        07:00
+                                    </div>
+                                    <div class="time-mark">
+                                        08:00
+                                    </div>
+                                    <div class="time-mark">
+                                        09:00
+                                    </div>
+                                    <div class="time-mark">
+                                        10:00
+                                    </div>
+                                    <div class="time-mark">
+                                        11:00
+                                    </div>
+                                    <div class="time-mark">
+                                        12:00
+                                    </div>
+                                    <div class="time-mark">
+                                        13:00
+                                    </div>
+                                    <div class="time-mark">
+                                        14:00
+                                    </div>
+                                    <div class="time-mark">
+                                        15:00
+                                    </div>
+                                    <div class="time-mark">
+                                        16:00
+                                    </div>
+                                    <div class="time-mark">
+                                        17:00
+                                    </div>
+                                    <div class="time-mark">
+                                        18:00
+                                    </div>
+                                    <div class="time-mark">
+                                        19:00
+                                    </div>
+                                    <div class="time-mark">
+                                        20:00
+                                    </div>
+                                    <div class="time-mark">
+                                        21:00
+                                    </div>
+                                    <div class="time-mark">
+                                        22:00
+                                    </div>
+                                    <div class="time-mark">
+                                        23:00
+                                    </div>
+                                    <div class="time-mark">
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cell-container">
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cell-container">
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cell-container">
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cell-container">
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cell-container">
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cell-container">
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cell-container">
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                    <div class="cell">
+
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>          
+                </table>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="../../shared/js/layout.js"></script>
+<script src="./schedule.js"></script>
+</html>
