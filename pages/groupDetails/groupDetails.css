@@ -1,0 +1,157 @@
+.taskbar-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 640px;
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.121);
+    background-color: white;
+    z-index: 999;
+    position: sticky;
+    top: 80px;
+}
+.taskbar {
+    position: sticky;
+    top: 80px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+.task-section, .group-section, .member-section {
+    width: 100%;
+    padding: 0 0 20px;
+}
+.task-container, .group-container, .member-container {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-color: white;
+    width: 95%;
+    max-width: 1250px;
+    flex-wrap: wrap;
+}
+.group-container, .member-container {
+    max-width: 600px;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+}
+.group-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.group-container .create-group {
+    width: 100%;
+}
+.group-container input {
+    max-width: 300px;
+    min-width: 100px;
+    width: 100%;
+}
+.group-container textarea {
+    width: 100%;
+    height: 25%;
+}
+.task-container .task-giver {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px   ;
+}
+.task-giver .task-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.task-content .primary {
+    align-self: flex-end;
+}
+.task-content .label-group {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.task-content textarea {
+    height: 90px;
+}
+.task-container .member-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    padding: 0 10px 0 10px;
+}
+.member-selector .member-container {
+    border: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.member-container .member-info {
+    padding: 3px 5px;
+    border-radius: 5px;
+    width: calc((100% - 20px * 3) / 4);
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    width: fit-content;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.member-container .member-info:hover {
+    background-color: rgba(128, 128, 128, 0.245);
+}
+.member-info .member-image {
+    height: 24px;
+}
+.member-image img {
+    width: 24px;
+    border-radius: 50%;
+}
+.create-options {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+}
+.create-choice {
+    font-size: 15px;
+    opacity: 0.5;
+    padding: 8px 16px;
+    border-bottom: 2px solid black;
+    transition: 0.25s;
+    font-weight: 600;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+}
+.create-choice:hover {
+    background-color: rgba(128, 128, 128, 0.245);
+}
+.create-choice.active {
+    opacity: 1;
+    border-width: 2px;
+    border-color: var(--accent);
+    color: var(--accent);
+}
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Giver | Farland Superlunary</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="../../shared/css/utils.css">
+    <link rel="stylesheet" href="groupDetails.css">
+</head>
+<body>
+    <header></header>
+    <main>
+        <section class="taskbar-section">
+            <div class="taskbar">
+                <button class="secondary bar-option" id="task">
+                    Giao việc
+                </button>  
+                <button class="secondary bar-option" id="group">
+                    Quản lý nhóm
+                </button>  
+                <button class="secondary bar-option" id="member">
+                    Thành viên
+                </button>
+            </div>
+        </section>
+        <section class="task-section">
+            <div class="task-container container">
+                <div class="task-giver">
+                    <div class="create-options">
+                        <div class="create-choice">Công việc</div>
+                        <div class="create-choice">Sự Kiện</div>
+                    </div>
+                    <form class="task-content">
+                        <div class="label-group">
+                            <label class="content-label">
+                                <div>
+                                    Tên <span class="important">*</span>
+                                </div>
+                                <div class="mode">
+                                    <input type="text" maxlength="50" required>   
+                                </div>
+                            </label>
+                            <label class="content-label">
+                                <div>
+                                    Ngày tạo <span class="important">*</span>
+                                </div>
+                                <div class="mode">
+                                    <input type="datetime-local" required>   
+                                </div>
+                            </label>
+                            <label class="content-label">
+                                <div>
+                                    Hạn chót <span class="important">*</span>
+                                </div>
+                                <div class="mode">
+                                    <input type="datetime-local" required>   
+                                </div>
+                            </label>
+                        </div>
+                        <label class="content-label">
+                            Mô tả
+                            <textarea type="text" placeholder="Thêm mô tả" maxlength="250"></textarea>
+                        </label>
+                        <button class="primary">Giao việc</button>
+                    </form>
+                </div>
+                <div class="member-selector">
+                    <div class="create-options">
+                        <div class="create-choice">Thành viên nhóm</div>
+                    </div>
+                    <div class="member-container">
+                        <div class="member-info">
+                            <input type="checkbox">
+                            <div class="member-image">
+                                <img src="/assets/members/cca8ee01ef6e0bc6525cf22f52fff53e.png">
+                            </div>
+                            <div class="member-name">
+                                Test Member 1
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <input type="checkbox">
+                            <div class="member-image">
+                                <img src="/assets/members/cca8ee01ef6e0bc6525cf22f52fff53e.png">
+                            </div>
+                            <div class="member-name">
+                                Test Member 1
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <input type="checkbox">
+                            <div class="member-image">
+                                <img src="/assets/members/cca8ee01ef6e0bc6525cf22f52fff53e.png">
+                            </div>
+                            <div class="member-name">
+                                Test Member 1
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <input type="checkbox">
+                            <div class="member-image">
+                                <img src="/assets/members/cca8ee01ef6e0bc6525cf22f52fff53e.png">
+                            </div>
+                            <div class="member-name">
+                                Test Member 1
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <input type="checkbox">
+                            <div class="member-image">
+                                <img src="/assets/members/cca8ee01ef6e0bc6525cf22f52fff53e.png">
+                            </div>
+                            <div class="member-name">
+                                Test Member 1
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="group-section" style="display: none;">
+            <div class="group-container container">
+                <h3>Thông tín nhóm</h3>
+                <form>
+                    <label class="create-group">
+                        <div>
+                            Tên nhóm <span class="important">*</span>
+                        </div>
+                        <input type="text" name="group-name" required maxlength="50" value="Farland Superlunary">
+                    </label>
+                    <label class="create-group">
+                        Mô tả nhóm 
+                        <textarea type="text" name="group-desc" maxlength="150" placeholder="Tối đa 150 ký tự...">Group giao việc của Farland Superlunary</textarea>
+                    </label>
+                    <div>
+                        Mã tham gia: <span class="group-code">ABC123</span>
+                    </div>
+                    <button class="primary">Cập nhật nhóm</button>
+                </form>
+            </div>
+        </section>
+        <section class="member-section" style="display: none;">
+            <div class="group-container container">
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+<script src="../../shared/js/layout.js"></script>
+<script src="../../shared/js/modal.js"></script>
+<script src="groupDetails.js"></script>
+</html>

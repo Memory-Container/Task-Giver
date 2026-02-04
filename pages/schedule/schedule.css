@@ -1,11 +1,4 @@
-:root {
-    --column-height: 60px;
-    --border-opacity: 0.07;
-    --border-color: 0, 0, 0, var(--border-opacity);
-    --border: rgba(var(--border-color));
-    --checkbox-color: rgb(0, 68, 156);
-    --checkbox-width: 14px;
-}
+
 main {
     height: 100%;
 }
@@ -50,15 +43,6 @@ main {
     justify-content: center;
     text-decoration: none;
     width: 100%;
-    padding: 8px 16px;
-    border-radius: 8px;
-    transition: all .2s ease;
-    font-weight: 500;
-    box-shadow: 0px 3px 4px #7272723b, -2px -3px 4px #ffffff1e, inset 0px 0px 0px #44444489, inset 0px 0px 0px #ffffff21;;
-    color: rgb(66, 66, 66);
-    background-color: white;
-    font-size: 16px;
-    border: 1px solid #00000052;
 }
 .create-options {
     display: flex;
@@ -179,36 +163,6 @@ label.tag {
 label.tag:hover {
     background-color: rgb(210, 210, 210);
 }
-input[type="checkbox"] {
-    display: inline;
-    appearance: none;
-    width: var(--checkbox-width);
-    height: var(--checkbox-width);
-    border: 2px solid var(--checkbox-color);
-    border-radius: 3px;
-    cursor: pointer;
-    display: grid;
-    place-content: center;
-}
-input[type="checkbox"]::before {
-    content: "";
-    width: var(--checkbox-width);
-    height: var(--checkbox-width);
-    border-radius: 3px;
-    background-color: var(--checkbox-color);
-    background-image: url("../../assets/svg/check.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    transition: 0.2s;
-}
-input[type="checkbox"]:hover::before {
-    background-color: var(--checkbox-color);
-}
-input[type="checkbox"]:checked::before {
-    opacity: 1;
-}
 .btn-new {
     padding: 2px 4px;
     border: 0;
@@ -243,6 +197,7 @@ table.calendar {
     border: 0;
     transition: 0.3s;
     letter-spacing: 1px;
+    padding: 0;
 }
 .circle:hover {
     background-color: color-mix(in srgb,var(--accent) 100%, rgb(255, 255, 255) 100%);
