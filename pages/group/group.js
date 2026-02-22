@@ -91,6 +91,6 @@ function getGroupData() {
 let group = document.querySelectorAll(".group")
 group.forEach((element, index) => {
     element.addEventListener("click", () => {
-    window.location.assign("../../pages/groupDetails")
+    window.location.assign("../../pages/groupDetails/")
     })
 })
