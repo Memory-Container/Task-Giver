@@ -6,6 +6,7 @@
     <title>Task Giver | Farland Superlunary</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="../../shared/css/utils.css">
+    <link rel="stylesheet" href="../../shared/css/modal.css">
     <link rel="stylesheet" href="groupDetails.css">
 </head>
 <body>
@@ -26,93 +27,249 @@
         </section>
         <section class="task-section">
             <div class="task-container container">
-                <div class="task-giver">
-                    <div class="create-options">
-                        <div class="create-choice">Công việc</div>
-                        <div class="create-choice">Sự Kiện</div>
-                    </div>
-                    <form class="task-content">
-                        <div class="label-group">
-                            <label class="content-label">
-                                <div>
-                                    Tên <span class="important">*</span>
-                                </div>
-                                <div class="mode">
-                                    <input type="text" maxlength="50" required>   
-                                </div>
-                            </label>
-                            <label class="content-label">
-                                <div>
-                                    Ngày tạo <span class="important">*</span>
-                                </div>
-                                <div class="mode">
-                                    <input type="datetime-local" required>   
-                                </div>
-                            </label>
-                            <label class="content-label">
-                                <div>
-                                    Hạn chót <span class="important">*</span>
-                                </div>
-                                <div class="mode">
-                                    <input type="datetime-local" required>   
-                                </div>
-                            </label>
+                <div class="task-group">
+                    <div class="task-header">
+                        Chưa được bàn giao
+                        <div class="task-function">
+                            <i class="fa-solid fa-plus" onclick="openTaskModal('not-transfered')"></i>
+                            <i class="fa-solid fa-chevron-down"></i>
                         </div>
-                        <label class="content-label">
-                            Mô tả
-                            <textarea type="text" placeholder="Thêm mô tả" maxlength="250"></textarea>
-                        </label>
-                        <button class="primary">Giao việc</button>
-                    </form>
+                    </div>
+                    <div class="task-board" id="not-transfered">
+                        <div class="task" data-id="0">
+                            <div class="task-detail">
+                                <div class="task-name">
+                                    Làm cái UI giao task này
+                                </div>
+                                <div class="task-property">
+                                    <i class="fa-solid fa-user"></i>
+                                    <div class="task-user">
+                                        <div class="user">
+                                            <div class="user-img" style="--user-url: url(/assets/members/cca8ee01ef6e0bc6525cf22f52fff53e.png)"></div>
+                                            <div class="user-name">
+                                                Russian Catto
+                                            </div>
+                                        </div>
+                                        <div class="user">
+                                            <div class="user-img" style="--user-url: url(/assets/members/cca8ee01ef6e0bc6525cf22f52fff53e.png)"></div>
+                                            <div class="user-name">
+                                                Russian Catto
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="task-property">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <div class="task-time">
+                                        15/02/2025 - 24/02/2025
+                                    </div>
+                                </div>
+                                <div class="task-property">
+                                    <i class="fa-solid fa-check"></i>
+                                    <div class="task-time">
+                                        0 / 10
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="task" data-id="1">
+                            <div class="task-detail">
+                                <div class="task-name">
+                                    Làm cái UI giao task này
+                                </div>
+                                <div class="task-property">
+                                    <i class="fa-solid fa-user"></i>
+                                    <div class="task-user">
+                                        <div class="user">
+                                            <div class="user-img" style="--user-url: url(/assets/members/cca8ee01ef6e0bc6525cf22f52fff53e.png)"></div>
+                                            <div class="user-name">
+                                                Russian Catto
+                                            </div>
+                                        </div>
+                                        <div class="user">
+                                            <div class="user-img" style="--user-url: url(/assets/members/cca8ee01ef6e0bc6525cf22f52fff53e.png)"></div>
+                                            <div class="user-name">
+                                                Russian Catto
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="task-property">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <div class="task-time">
+                                        15/02/2025 - 24/02/2025
+                                    </div>
+                                </div>
+                                <div class="task-property">
+                                    <i class="fa-solid fa-check"></i>
+                                    <div class="task-time">
+                                        0 / 10
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="member-selector">
-                    <div class="create-options">
-                        <div class="create-choice">Thành viên nhóm</div>
+                <div class="task-group">
+                    <div class="task-header">
+                        Đang hoàn thành
+                        <div class="task-function">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
                     </div>
-                    <div class="member-container">
-                        <div class="member-info">
-                            <input type="checkbox">
-                            <div class="member-image">
-                                <img src="/assets/members/cca8ee01ef6e0bc6525cf22f52fff53e.png">
-                            </div>
-                            <div class="member-name">
-                                Test Member 1
+                    <div class="task-board" id="in-progress">
+                        <div class="task" data-id="3">
+                            <div class="task-detail">
+                                <div class="task-name">
+                                    Làm cái UI giao task này
+                                </div>
+                                <div class="task-property">
+                                    <i class="fa-solid fa-user"></i>
+                                    <div class="task-user">
+                                        <div class="user">
+                                            <div class="user-img" style="--user-url: url(/assets/members/cca8ee01ef6e0bc6525cf22f52fff53e.png)"></div>
+                                            <div class="user-name">
+                                                Russian Catto
+                                            </div>
+                                        </div>
+                                        <div class="user">
+                                            <div class="user-img" style="--user-url: url(/assets/members/cca8ee01ef6e0bc6525cf22f52fff53e.png)"></div>
+                                            <div class="user-name">
+                                                Russian Catto
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="task-property">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <div class="task-time">
+                                        15/02/2025 - 24/02/2025
+                                    </div>
+                                </div>
+                                <div class="task-property">
+                                    <i class="fa-solid fa-check"></i>
+                                    <div class="task-time">
+                                        0 / 10
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="member-info">
-                            <input type="checkbox">
-                            <div class="member-image">
-                                <img src="/assets/members/cca8ee01ef6e0bc6525cf22f52fff53e.png">
-                            </div>
-                            <div class="member-name">
-                                Test Member 1
+                        <div class="task" data-id="4">
+                            <div class="task-detail">
+                                <div class="task-name">
+                                    Làm cái UI giao task này
+                                </div>
+                                <div class="task-property">
+                                    <i class="fa-solid fa-user"></i>
+                                    <div class="task-user">
+                                        <div class="user">
+                                            <div class="user-img" style="--user-url: url(/assets/members/cca8ee01ef6e0bc6525cf22f52fff53e.png)"></div>
+                                            <div class="user-name">
+                                                Russian Catto
+                                            </div>
+                                        </div>
+                                        <div class="user">
+                                            <div class="user-img" style="--user-url: url(/assets/members/cca8ee01ef6e0bc6525cf22f52fff53e.png)"></div>
+                                            <div class="user-name">
+                                                Russian Catto
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="task-property">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <div class="task-time">
+                                        15/02/2025 - 24/02/2025
+                                    </div>
+                                </div>
+                                <div class="task-property">
+                                    <i class="fa-solid fa-check"></i>
+                                    <div class="task-time">
+                                        0 / 10
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="member-info">
-                            <input type="checkbox">
-                            <div class="member-image">
-                                <img src="/assets/members/cca8ee01ef6e0bc6525cf22f52fff53e.png">
-                            </div>
-                            <div class="member-name">
-                                Test Member 1
+                    </div>
+                </div>
+                <div class="task-group">
+                    <div class="task-header">
+                        Hoàn thành
+                        <div class="task-function">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="task-board" id="completed">
+                        <div class="task" data-id="5">
+                            <div class="task-detail">
+                                <div class="task-name">
+                                    Làm cái UI giao task này
+                                </div>
+                                <div class="task-property">
+                                    <i class="fa-solid fa-user"></i>
+                                    <div class="task-user">
+                                        <div class="user">
+                                            <div class="user-img" style="--user-url: url(/assets/members/cca8ee01ef6e0bc6525cf22f52fff53e.png)"></div>
+                                            <div class="user-name">
+                                                Russian Catto
+                                            </div>
+                                        </div>
+                                        <div class="user">
+                                            <div class="user-img" style="--user-url: url(/assets/members/cca8ee01ef6e0bc6525cf22f52fff53e.png)"></div>
+                                            <div class="user-name">
+                                                Russian Catto
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="task-property">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <div class="task-time">
+                                        15/02/2025 - 24/02/2025
+                                    </div>
+                                </div>
+                                <div class="task-property">
+                                    <i class="fa-solid fa-check"></i>
+                                    <div class="task-time">
+                                        0 / 10
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="member-info">
-                            <input type="checkbox">
-                            <div class="member-image">
-                                <img src="/assets/members/cca8ee01ef6e0bc6525cf22f52fff53e.png">
-                            </div>
-                            <div class="member-name">
-                                Test Member 1
-                            </div>
-                        </div>
-                        <div class="member-info">
-                            <input type="checkbox">
-                            <div class="member-image">
-                                <img src="/assets/members/cca8ee01ef6e0bc6525cf22f52fff53e.png">
-                            </div>
-                            <div class="member-name">
-                                Test Member 1
+                        <div class="task" data-id="6">
+                            <div class="task-detail">
+                                <div class="task-name">
+                                    Làm cái UI giao task này
+                                </div>
+                                <div class="task-property">
+                                    <i class="fa-solid fa-user"></i>
+                                    <div class="task-user">
+                                        <div class="user">
+                                            <div class="user-img" style="--user-url: url(/assets/members/cca8ee01ef6e0bc6525cf22f52fff53e.png)"></div>
+                                            <div class="user-name">
+                                                Russian Catto
+                                            </div>
+                                        </div>
+                                        <div class="user">
+                                            <div class="user-img" style="--user-url: url(/assets/members/cca8ee01ef6e0bc6525cf22f52fff53e.png)"></div>
+                                            <div class="user-name">
+                                                Russian Catto
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="task-property">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <div class="task-time">
+                                        15/02/2025 - 24/02/2025
+                                    </div>
+                                </div>
+                                <div class="task-property">
+                                    <i class="fa-solid fa-check"></i>
+                                    <div class="task-time">
+                                        0 / 10
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

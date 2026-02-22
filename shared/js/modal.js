@@ -85,3 +85,6 @@ function flushModal() {
     choices.style.display = ''
     choices.classList.remove('hidden')
 }
+function dummyFunction() {
+    console.log(1)
+}

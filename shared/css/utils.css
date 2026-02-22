@@ -7,7 +7,7 @@
 :root {
     --font-family: "Quicksand", sans-serif;
     --accent-code: 57, 156, 255;
-    --accent: rgb(var(--accent-code));
+    --accent: rgba(var(--accent-code));
     --text-color: rgb(27, 27, 27);
     --bg-default: #efefef;
 
@@ -271,4 +271,15 @@ form .primary {
 .important {
     display: inline;
     color: red !important;
+}
+.icon {
+    --icon-url: url("/");
+    width: 18px;
+    height: 18px;
+    background-color: #8b8b8b;
+    -webkit-mask: var(--icon-url) no-repeat center;
+    mask: var(--icon-url) no-repeat center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    transition: 0.3s;
 }
